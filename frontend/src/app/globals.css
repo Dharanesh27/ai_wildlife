@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617; /* slate-950 */
+  --foreground: #f8fafc; /* slate-50 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom Scrollbar for sleek dashboard experience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* slate-900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-600 */
+}
+
+/* Glow effects & Glassmorphism helpers */
+.glass {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+}
+
+/* Custom styling overrides for Leaflet Popups to match Sleek Dark Theme */
+.custom-leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: #0f172a !important; /* bg-slate-900 */
+  border: 1px solid #1e293b !important; /* border-slate-800 */
+  border-radius: 12px !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+  padding: 4px !important;
+}
+
+.custom-leaflet-popup .leaflet-popup-tip {
+  background-color: #0f172a !important;
+  border-left: 1px solid #1e293b !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+/* Custom Marker styling overrides */
+.custom-device-icon {
+  background: none !important;
+  border: none !important;
+}
